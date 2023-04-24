@@ -39,9 +39,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
-// import { useConfigStore } from '@/store/config'
+import { useConfigStore } from '@/store/config'
 
-// const { setTheme, theme, setSize, size, setLanguage } = useConfigStore()
+const { setTheme, theme, setSize, size, setLanguage } = useConfigStore()
 const route = useRoute()
 const changeLanguage = (langParam) => {
   setLanguage(langParam, route.meta?.title)
